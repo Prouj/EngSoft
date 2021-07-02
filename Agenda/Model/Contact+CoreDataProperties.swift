@@ -23,6 +23,19 @@ extension Contact {
     @NSManaged public var numberOne: String?
     @NSManaged public var numberTwo: String?
     @NSManaged public var contactToGroup: NSSet?
+    
+    public var wrappedName: String {
+        name ?? "Desconhecido"
+    }
+    
+    public var grouArray: [Group] {
+        let set = contactToGroup as? Set<Group> ?? []
+    
+        return set.sorted {
+            $0.wrappedName < $1.wrappedName
+        }
+    }
+
 
 }
 

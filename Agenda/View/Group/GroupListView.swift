@@ -14,7 +14,7 @@ struct GroupListView: View {
     
     @FetchRequest(entity: Group.entity(), sortDescriptors: [])
         
-    public var group: FetchedResults<Group>
+    public var groups: FetchedResults<Group>
     @ObservedObject private var groupViewModel: GroupViewModel = GroupViewModel()
     
     var body: some View {
@@ -22,20 +22,20 @@ struct GroupListView: View {
             ZStack(alignment: .top) {
                 VStack {
                     VStack {
-                            if !group.isEmpty {
+                            if !groups.isEmpty {
                                 SearchBar(text: $searchText)
                                     .padding(.bottom, 10)
                                 List {
-                                    ForEach(group.filter({searchText.isEmpty ? true : $0.name!.contains(searchText) })) { item in
-//                                        NavigationLink(destination: ContactsInGroupView(group: item)) {
+                                    ForEach(groups.filter({searchText.isEmpty ? true : $0.name!.contains(searchText) })) { item in
+                                        NavigationLink(destination: ContactsInGroupView(group: item)) {
                                             HStack {
                                                 Text(item.name ?? "no name")
                                             }
-//                                        }
+                                        }
                                         
                                     }.onDelete(perform: { indexSet in
                                         indexSet.forEach { index in
-                                            let group = group[index]
+                                            let group = groups[index]
                                             GroupViewModel().delete(group: group)
                                         }
                                     })

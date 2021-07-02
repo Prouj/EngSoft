@@ -19,7 +19,7 @@ class GroupViewModel: ObservableObject {
         let newGroup = Group(context: viewContext)
         newGroup.iD = UUID()
         newGroup.name = name
-//        newGroup.groupToContact = contacts
+        newGroup.addToGroupToContact(NSSet(array: contacts))
         do {
             try viewContext.save()
         } catch let error as NSError {

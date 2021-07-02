@@ -11,7 +11,8 @@ struct AddContactInGroup: View {
     @State var searchText: String = ""
     @State var checked: Bool = false
     @Binding var showingModal: Bool
-    
+    @State var name: String
+    @State var contacts: [Contact] = []
     
     @Environment(\.managedObjectContext) private var viewContext
     
@@ -31,22 +32,19 @@ struct AddContactInGroup: View {
                             List {
                                 ForEach(contact.filter({searchText.isEmpty ? true : $0.name!.contains(searchText) })) { item in
                                     
-                                    HStack {
+                                    Button(action: {
+                                        contacts.append(item)
+                                        if contacts.last == item {
+                                            self.checked.toggle()
+                                        }
+                                    }, label: {
                                         
-                                        Image(systemName: checked ? "checkmark.square.fill" : "square")
-                                            .foregroundColor(checked ? Color(UIColor.systemBlue) : Color.secondary)
-                                            .frame(minWidth: 25, idealWidth: 25, maxWidth: 25, minHeight: 15, idealHeight: 15, maxHeight: 15)
-                                            .padding(.leading, 5)
-                                            .onTapGesture {
-                                                self.checked.toggle()
-                                            }
-                                        
-                                        Text(item.name ?? "no name")
-                                        Text(item.cep ?? "no cep")
-                                        
-                                        
-                                    }
-                                    
+                                        HStack {
+//                                            button
+                                            Text(item.name ?? "no name")
+                                            Text(item.cep ?? "no cep")
+                                        }
+                                    })
                                     
                                 }
                             }
@@ -71,6 +69,7 @@ struct AddContactInGroup: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                                 Button(action: {
+                                    GroupViewModel().create(name: name, contacts: contacts)
                                     showingModal = false
 
                                 }) {
@@ -83,6 +82,24 @@ struct AddContactInGroup: View {
 
         }
 
+    }
+    
+    var button: some View {
+        
+        ZStack() {
+            switch checked {
+            case true:
+                Image(systemName: "checkmark.square.fill")
+                    .foregroundColor(checked ? Color(UIColor.systemBlue) : Color.secondary)
+                    .frame(minWidth: 25, idealWidth: 25, maxWidth: 25, minHeight: 15, idealHeight: 15, maxHeight: 15)
+                    .padding(.leading, 5)
+            default:
+                Image(systemName: "square")
+                    .foregroundColor(checked ? Color(UIColor.systemBlue) : Color.secondary)
+                    .frame(minWidth: 25, idealWidth: 25, maxWidth: 25, minHeight: 15, idealHeight: 15, maxHeight: 15)
+                    .padding(.leading, 5)
+            }
+        }
     }
 }
 

@@ -19,6 +19,19 @@ extension Group {
     @NSManaged public var iD: UUID?
     @NSManaged public var name: String?
     @NSManaged public var groupToContact: NSSet?
+    
+    public var wrappedName: String {
+        name ?? "desconhecido"
+    }
+    
+    public var contactArray: [Contact] {
+        let set = groupToContact as? Set<Contact> ?? []
+    
+        return set.sorted {
+            $0.wrappedName < $1.wrappedName
+        }
+    }
+
 
 }
 

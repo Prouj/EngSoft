@@ -10,10 +10,15 @@ import Combine
 
 struct NewGroupView: View {
     
-    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.presentationMode) var viewContext
     @State var name: String = ""
+//    @State public var contacts: [Contact] = []
     @State private var showingAlert = false
     @State private var showingModal = false
+    
+    
+//    var contacts: [Contact] = [ContactViewModel().create(name: "TESTE", email: "teste@gmail.com", cep: "8888", numberOne: "000000", numberTwo: "0000")]
+    
     
     let onSave = PassthroughSubject<Void, Never>()
     let onCancel = PassthroughSubject<Void, Never>()
@@ -51,7 +56,7 @@ struct NewGroupView: View {
                             .padding(.trailing, 20)
                             .padding(.top, 30)
                             .sheet(isPresented: $showingModal, onDismiss: {showingModal = false} ,content: {
-                                AddContactInGroup(showingModal: $showingModal)
+                                AddContactInGroup(showingModal: $showingModal, name: name)
                             })
                     }
                    
@@ -68,8 +73,9 @@ struct NewGroupView: View {
     var trailingButton: some View {
         Button("Salvar") {
             if name.count > 0 {
-                self.presentationMode.wrappedValue.dismiss()
-//                GroupViewModel().create(name: name)
+//                self.presentationMode.wrappedValue.dismiss()
+//                GroupViewModel().create(name: name, contacts: [ContactViewModel().create(name: "TESTE", email: "teste@gmail.com", cep: "8888", numberOne: "000000", numberTwo: "0000")])
+//                GroupViewModel().create(name: name, contacts: contacts)
                 
             } else {
                 showingAlert = true
@@ -80,11 +86,15 @@ struct NewGroupView: View {
                     Alert(title: Text("Olá"), message: Text("Parece que você esqueceu de dar um nome ao contato."), dismissButton: .default(Text("OK")))
                 }
     }
+    
+//    func selectedContacts(contacts: [Contact]) {
+//        self.contacts = contacts
+//    }
 }
 
-struct NewGroupView_Previews: PreviewProvider {
-    static var previews: some View {
-        NewGroupView()
-    }
-}
+//struct NewGroupView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NewGroupView()
+//    }
+//}
 
