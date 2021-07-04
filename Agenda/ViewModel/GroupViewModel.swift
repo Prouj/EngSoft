@@ -37,8 +37,21 @@ class GroupViewModel: ObservableObject {
         }
     }
     
-    func update(for group: Group, newGroup: Group) {
-        group.name = newGroup.name
+    func deleteContactInGroup(contact: Contact, group: Group) {
+        
+        group.removeFromGroupToContact(contact)
+        
+        do {
+            try viewContext.save()
+        } catch let error as NSError {
+            print("Could not delete. \(error), \(error.userInfo)")
+        }
+    }
+    
+    func update(group: Group, name: String, contacts: [Contact]) {
+        group.iD = group.iD
+        group.name = name
+        group.addToGroupToContact(NSSet(array: contacts))
         
         do {
             try viewContext.save()

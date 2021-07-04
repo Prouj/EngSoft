@@ -29,6 +29,8 @@
 		A454578A268A7A4700DE1F13 /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4545786268A7A4700DE1F13 /* Contact+CoreDataProperties.swift */; };
 		A454578B268A7A4700DE1F13 /* Group+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4545787268A7A4700DE1F13 /* Group+CoreDataClass.swift */; };
 		A454578C268A7A4700DE1F13 /* Group+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4545788268A7A4700DE1F13 /* Group+CoreDataProperties.swift */; };
+		A454578E2690C83500DE1F13 /* EditContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A454578D2690C83500DE1F13 /* EditContactView.swift */; };
+		A45457902690D56A00DE1F13 /* EditGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A454578F2690D56A00DE1F13 /* EditGroupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		A4545786268A7A4700DE1F13 /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A4545787268A7A4700DE1F13 /* Group+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Group+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A4545788268A7A4700DE1F13 /* Group+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Group+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A454578D2690C83500DE1F13 /* EditContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactView.swift; sourceTree = "<group>"; };
+		A454578F2690D56A00DE1F13 /* EditGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGroupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,7 @@
 				A454577B268A77B200DE1F13 /* ContactInfoView.swift */,
 				A454577D268A77C800DE1F13 /* ContactListView.swift */,
 				A454577F268A77E600DE1F13 /* NewContactView.swift */,
+				A454578D2690C83500DE1F13 /* EditContactView.swift */,
 			);
 			path = Contact;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 				A4545775268A775800DE1F13 /* ContactsInGroupView.swift */,
 				A4545777268A777600DE1F13 /* NewGroupView.swift */,
 				A4545779268A778E00DE1F13 /* AddContactInGroup.swift */,
+				A454578F2690D56A00DE1F13 /* EditGroupView.swift */,
 			);
 			path = Group;
 			sourceTree = "<group>";
@@ -252,6 +258,7 @@
 				A4545766268A766200DE1F13 /* Persistence.swift in Sources */,
 				A454576D268A76DD00DE1F13 /* HideKeyBoard.swift in Sources */,
 				A4545772268A772700DE1F13 /* SearchBar.swift in Sources */,
+				A45457902690D56A00DE1F13 /* EditGroupView.swift in Sources */,
 				A4545780268A77E600DE1F13 /* NewContactView.swift in Sources */,
 				A4545784268A783200DE1F13 /* GroupModel.swift in Sources */,
 				A454576A268A76AD00DE1F13 /* GroupViewModel.swift in Sources */,
@@ -259,6 +266,7 @@
 				A4545749268A74BB00DE1F13 /* AgendaApp.swift in Sources */,
 				A4545778268A777600DE1F13 /* NewGroupView.swift in Sources */,
 				A454577A268A778E00DE1F13 /* AddContactInGroup.swift in Sources */,
+				A454578E2690C83500DE1F13 /* EditContactView.swift in Sources */,
 				A4545789268A7A4700DE1F13 /* Contact+CoreDataClass.swift in Sources */,
 				A454578A268A7A4700DE1F13 /* Contact+CoreDataProperties.swift in Sources */,
 				A4545776268A775800DE1F13 /* ContactsInGroupView.swift in Sources */,

@@ -56,7 +56,17 @@ struct ContactInfoView: View {
             Spacer()
         }.navigationTitle(contact.name ?? "Sem nome")
         .padding(.leading, 20)
-    }
+        
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                NavigationLink(destination: EditContactView(contact: contact, name: contact.name!, email: contact.email!, cep: contact.cep!, numberOne: contact.numberOne!, numberTwo: contact.numberTwo!)) {
+                    Text("Editar")
+                        .padding(.trailing, 20)
+                        .padding(.top, 30)
+                }
+            }
+        }
+    }   
 }
 
 //struct ContactInfoView_Previews: PreviewProvider {

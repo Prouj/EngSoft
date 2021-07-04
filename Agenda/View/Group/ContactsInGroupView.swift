@@ -11,6 +11,7 @@ struct ContactsInGroupView: View {
     @State var searchText: String = ""
     
     @State var group: Group
+    @ObservedObject private var groupViewModel: GroupViewModel = GroupViewModel()
     
     var body: some View {
 //        NavigationView {
@@ -30,7 +31,13 @@ struct ContactsInGroupView: View {
                                             }
                                         }
                                         
-                                    }
+                                    }.onDelete(perform: { indexSet in
+                                        indexSet.forEach { index in
+                                            let contact = group.contactArray[index]
+                                            GroupViewModel().deleteContactInGroup(contact: contact, group: group)
+                                               
+                                        }
+                                    })
                                 }
                             } else {
                                 HStack {
@@ -50,9 +57,9 @@ struct ContactsInGroupView: View {
             
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-//                    NavigationLink(destination:) {
+                    NavigationLink(destination: EditGroupView(group: group, name: group.name!)) {
                         Text("Editar")
-//                    }
+                    }
                 }
             }
 //        }

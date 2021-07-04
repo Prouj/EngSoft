@@ -17,7 +17,7 @@ class ContactViewModel: ObservableObject {
     let onSave = PassthroughSubject<Void, Never>()
     let onCancel = PassthroughSubject<Void, Never>()
     
-    func create(name: String, email: String, cep: String, numberOne: String, numberTwo: String) -> Contact {
+    func create(name: String, email: String, cep: String, numberOne: String, numberTwo: String) {
         
         let newContact = Contact(context: viewContext)
         newContact.iD = UUID()
@@ -33,7 +33,7 @@ class ContactViewModel: ObservableObject {
             print("could not save \(error) \(error.userInfo)")
         }
         
-        return newContact
+//        return newContact/
     }
     
     func delete(contact: Contact) {
@@ -45,12 +45,14 @@ class ContactViewModel: ObservableObject {
         }
     }
     
-    func update(for contact: Contact, newContact: Contact) {
-        contact.name = newContact.name
-        contact.email = newContact.email
-        contact.cep = newContact.cep
-        contact.numberOne = newContact.numberOne
-        contact.numberTwo = newContact.numberTwo
+    func update(contact: Contact, name: String, email: String, cep: String, numberOne: String, numberTwo: String ) {
+
+        contact.iD = contact.iD
+        contact.name = name
+        contact.email = email
+        contact.cep = cep
+        contact.numberOne = numberOne
+        contact.numberTwo = numberTwo
         do {
             try viewContext.save()
         } catch let error as NSError {

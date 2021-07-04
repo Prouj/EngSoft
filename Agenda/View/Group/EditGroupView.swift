@@ -1,17 +1,17 @@
 //
-//  NewGroupView.swift
+//  EditGroupView.swift
 //  Agenda
 //
-//  Created by Paulo Uchôa on 28/06/21.
+//  Created by Paulo Uchôa on 03/07/21.
 //
 
 import SwiftUI
-import Combine
+import Combine 
 
-struct NewGroupView: View {
+struct EditGroupView: View {
     
-
-    @State var name: String = ""
+    @State var group: Group
+    @State var name: String 
     @State private var showingAlert = false
     @State private var showingModal = false
     @State var searchText: String = ""
@@ -106,7 +106,7 @@ struct NewGroupView: View {
                 }.foregroundColor(.black)
                 Spacer()
             }
-        .navigationBarTitle("Novo Grupo", displayMode: .inline)
+        .navigationBarTitle("Editando", displayMode: .inline)
         .navigationBarItems(trailing: trailingButton)
     }
 
@@ -115,7 +115,7 @@ struct NewGroupView: View {
         Button("Salvar") {
             if name.count > 0 {
                 
-                GroupViewModel().create(name: name, contacts: contacts)
+                GroupViewModel().update(group: group, name: name, contacts: contacts)
                 
             } else {
                 showingAlert = true
@@ -127,14 +127,10 @@ struct NewGroupView: View {
                 }
     }
     
-//    func selectedContacts(contacts: [Contact]) {
-//        self.contacts = contacts
-//    }
 }
 
-//struct NewGroupView_Previews: PreviewProvider {
+//struct EditGroupView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        NewGroupView()
+//        EditGroupView()
 //    }
 //}
-
