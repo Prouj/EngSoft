@@ -10,9 +10,10 @@ import SwiftUI
 @main
 struct AgendaApp: App {
     
-    let persistenceContainer = PersistenceController.shared
+    
     
     var body: some Scene {
+        let persistenceContainer = PersistenceController.shared
         WindowGroup {
             ContactListView()
                 .environment(\.managedObjectContext, persistenceContainer.container.viewContext)

@@ -9,6 +9,7 @@ import Foundation
 import CoreData
 
 class GroupViewModel: ObservableObject {
+    
     let viewContext = PersistenceController.shared.container.viewContext
     private var group: Group?
     

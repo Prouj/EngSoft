@@ -10,7 +10,6 @@ import Combine
 
 struct NewContactView: View {
     
-//    @StateObject var viewModel = ContactViewModel()
     @Environment(\.presentationMode) var presentationMode
     @State var name: String = ""
     @State var email: String = ""

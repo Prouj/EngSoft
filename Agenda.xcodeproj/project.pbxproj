@@ -31,6 +31,7 @@
 		A454578C268A7A4700DE1F13 /* Group+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4545788268A7A4700DE1F13 /* Group+CoreDataProperties.swift */; };
 		A454578E2690C83500DE1F13 /* EditContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A454578D2690C83500DE1F13 /* EditContactView.swift */; };
 		A45457902690D56A00DE1F13 /* EditGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A454578F2690D56A00DE1F13 /* EditGroupView.swift */; };
+		A45457942693904100DE1F13 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A45457932693904100DE1F13 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,8 @@
 		A4545788268A7A4700DE1F13 /* Group+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Group+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A454578D2690C83500DE1F13 /* EditContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactView.swift; sourceTree = "<group>"; };
 		A454578F2690D56A00DE1F13 /* EditGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGroupView.swift; sourceTree = "<group>"; };
+		A45457912693903B00DE1F13 /* Agenda.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Agenda.entitlements; sourceTree = "<group>"; };
+		A45457932693904100DE1F13 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A45457942693904100DE1F13 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +82,7 @@
 			children = (
 				A4545747268A74BB00DE1F13 /* Agenda */,
 				A4545746268A74BB00DE1F13 /* Products */,
+				A45457922693904100DE1F13 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +97,7 @@
 		A4545747268A74BB00DE1F13 /* Agenda */ = {
 			isa = PBXGroup;
 			children = (
+				A45457912693903B00DE1F13 /* Agenda.entitlements */,
 				A454576B268A76D100DE1F13 /* Extensions */,
 				A4545759268A750100DE1F13 /* View */,
 				A4545758268A74F800DE1F13 /* ViewModel */,
@@ -183,6 +189,14 @@
 				A4545771268A772700DE1F13 /* SearchBar.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		A45457922693904100DE1F13 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A45457932693904100DE1F13 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,6 +417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Agenda/Agenda.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Agenda/Preview Content\"";
 				DEVELOPMENT_TEAM = Y8XB2TQUP3;
@@ -425,6 +440,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Agenda/Agenda.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Agenda/Preview Content\"";
 				DEVELOPMENT_TEAM = Y8XB2TQUP3;

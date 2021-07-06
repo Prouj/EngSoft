@@ -10,14 +10,14 @@ import SwiftUI
 struct ContactListView: View {
     @State var searchText: String = ""
     @State var selectedIndex = 0
-//    @State var showingModal = false
     
     
     @Environment(\.managedObjectContext) private var viewContext
-    
+
     @FetchRequest(entity: Contact.entity(), sortDescriptors: [])
-        
+
     public var contact: FetchedResults<Contact>
+
     @ObservedObject private var contactViewModel: ContactViewModel = ContactViewModel()
     
     init() {
@@ -121,6 +121,9 @@ struct ContactListView: View {
                 }
             }
         }
+//        .onAppear() {
+//            contact = ContactViewModel().fetch()
+//        }
         .ignoresSafeArea(.keyboard, edges: .bottom)
     }
 }
