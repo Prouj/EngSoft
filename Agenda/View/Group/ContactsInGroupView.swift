@@ -27,7 +27,6 @@ struct ContactsInGroupView: View {
                                         NavigationLink(destination: ContactInfoView(contact: item)) {
                                             HStack {
                                                 Text(item.name ?? "no name")
-                                                Text(item.cep ?? "no cep")
                                             }
                                         }
                                         

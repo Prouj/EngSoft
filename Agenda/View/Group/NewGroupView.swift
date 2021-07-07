@@ -82,7 +82,6 @@ struct NewGroupView: View {
                                         HStack {
 //                                            button
                                             Text(item.name ?? "no name")
-                                            Text(item.cep ?? "no cep")
                                         }
                                     })
                                     

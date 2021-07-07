@@ -19,7 +19,6 @@
 		A4545774268A774100DE1F13 /* GroupListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4545773268A774100DE1F13 /* GroupListView.swift */; };
 		A4545776268A775800DE1F13 /* ContactsInGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4545775268A775800DE1F13 /* ContactsInGroupView.swift */; };
 		A4545778268A777600DE1F13 /* NewGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4545777268A777600DE1F13 /* NewGroupView.swift */; };
-		A454577A268A778E00DE1F13 /* AddContactInGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4545779268A778E00DE1F13 /* AddContactInGroup.swift */; };
 		A454577C268A77B200DE1F13 /* ContactInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A454577B268A77B200DE1F13 /* ContactInfoView.swift */; };
 		A454577E268A77C800DE1F13 /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A454577D268A77C800DE1F13 /* ContactListView.swift */; };
 		A4545780268A77E600DE1F13 /* NewContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A454577F268A77E600DE1F13 /* NewContactView.swift */; };
@@ -49,7 +48,6 @@
 		A4545773268A774100DE1F13 /* GroupListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListView.swift; sourceTree = "<group>"; };
 		A4545775268A775800DE1F13 /* ContactsInGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsInGroupView.swift; sourceTree = "<group>"; };
 		A4545777268A777600DE1F13 /* NewGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroupView.swift; sourceTree = "<group>"; };
-		A4545779268A778E00DE1F13 /* AddContactInGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactInGroup.swift; sourceTree = "<group>"; };
 		A454577B268A77B200DE1F13 /* ContactInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoView.swift; sourceTree = "<group>"; };
 		A454577D268A77C800DE1F13 /* ContactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
 		A454577F268A77E600DE1F13 /* NewContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactView.swift; sourceTree = "<group>"; };
@@ -177,7 +175,6 @@
 				A4545773268A774100DE1F13 /* GroupListView.swift */,
 				A4545775268A775800DE1F13 /* ContactsInGroupView.swift */,
 				A4545777268A777600DE1F13 /* NewGroupView.swift */,
-				A4545779268A778E00DE1F13 /* AddContactInGroup.swift */,
 				A454578F2690D56A00DE1F13 /* EditGroupView.swift */,
 			);
 			path = Group;
@@ -279,7 +276,6 @@
 				A454577E268A77C800DE1F13 /* ContactListView.swift in Sources */,
 				A4545749268A74BB00DE1F13 /* AgendaApp.swift in Sources */,
 				A4545778268A777600DE1F13 /* NewGroupView.swift in Sources */,
-				A454577A268A778E00DE1F13 /* AddContactInGroup.swift in Sources */,
 				A454578E2690C83500DE1F13 /* EditContactView.swift in Sources */,
 				A4545789268A7A4700DE1F13 /* Contact+CoreDataClass.swift in Sources */,
 				A454578A268A7A4700DE1F13 /* Contact+CoreDataProperties.swift in Sources */,
