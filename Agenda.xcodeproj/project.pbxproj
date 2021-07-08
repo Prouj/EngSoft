@@ -22,8 +22,6 @@
 		A454577C268A77B200DE1F13 /* ContactInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A454577B268A77B200DE1F13 /* ContactInfoView.swift */; };
 		A454577E268A77C800DE1F13 /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A454577D268A77C800DE1F13 /* ContactListView.swift */; };
 		A4545780268A77E600DE1F13 /* NewContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A454577F268A77E600DE1F13 /* NewContactView.swift */; };
-		A4545782268A781100DE1F13 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4545781268A781100DE1F13 /* ContactModel.swift */; };
-		A4545784268A783200DE1F13 /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4545783268A783200DE1F13 /* GroupModel.swift */; };
 		A4545789268A7A4700DE1F13 /* Contact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4545785268A7A4700DE1F13 /* Contact+CoreDataClass.swift */; };
 		A454578A268A7A4700DE1F13 /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4545786268A7A4700DE1F13 /* Contact+CoreDataProperties.swift */; };
 		A454578B268A7A4700DE1F13 /* Group+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4545787268A7A4700DE1F13 /* Group+CoreDataClass.swift */; };
@@ -51,8 +49,6 @@
 		A454577B268A77B200DE1F13 /* ContactInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoView.swift; sourceTree = "<group>"; };
 		A454577D268A77C800DE1F13 /* ContactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
 		A454577F268A77E600DE1F13 /* NewContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactView.swift; sourceTree = "<group>"; };
-		A4545781268A781100DE1F13 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
-		A4545783268A783200DE1F13 /* GroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupModel.swift; sourceTree = "<group>"; };
 		A4545785268A7A4700DE1F13 /* Contact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A4545786268A7A4700DE1F13 /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A4545787268A7A4700DE1F13 /* Group+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Group+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -119,13 +115,12 @@
 		A4545757268A74F100DE1F13 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A4545765268A766200DE1F13 /* Persistence.swift */,
 				A4545785268A7A4700DE1F13 /* Contact+CoreDataClass.swift */,
 				A4545786268A7A4700DE1F13 /* Contact+CoreDataProperties.swift */,
 				A4545787268A7A4700DE1F13 /* Group+CoreDataClass.swift */,
 				A4545788268A7A4700DE1F13 /* Group+CoreDataProperties.swift */,
 				A454575A268A751700DE1F13 /* AgendaContatos.xcdatamodeld */,
-				A4545781268A781100DE1F13 /* ContactModel.swift */,
-				A4545783268A783200DE1F13 /* GroupModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -133,7 +128,6 @@
 		A4545758268A74F800DE1F13 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				A4545765268A766200DE1F13 /* Persistence.swift */,
 				A4545767268A767B00DE1F13 /* ContactViewModel.swift */,
 				A4545769268A76AD00DE1F13 /* GroupViewModel.swift */,
 			);
@@ -271,7 +265,6 @@
 				A4545772268A772700DE1F13 /* SearchBar.swift in Sources */,
 				A45457902690D56A00DE1F13 /* EditGroupView.swift in Sources */,
 				A4545780268A77E600DE1F13 /* NewContactView.swift in Sources */,
-				A4545784268A783200DE1F13 /* GroupModel.swift in Sources */,
 				A454576A268A76AD00DE1F13 /* GroupViewModel.swift in Sources */,
 				A454577E268A77C800DE1F13 /* ContactListView.swift in Sources */,
 				A4545749268A74BB00DE1F13 /* AgendaApp.swift in Sources */,
@@ -284,7 +277,6 @@
 				A454578B268A7A4700DE1F13 /* Group+CoreDataClass.swift in Sources */,
 				A4545768268A767B00DE1F13 /* ContactViewModel.swift in Sources */,
 				A454578C268A7A4700DE1F13 /* Group+CoreDataProperties.swift in Sources */,
-				A4545782268A781100DE1F13 /* ContactModel.swift in Sources */,
 				A454575C268A751700DE1F13 /* AgendaContatos.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

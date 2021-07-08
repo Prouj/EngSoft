@@ -14,8 +14,6 @@ class ContactViewModel: ObservableObject {
     let viewContext = PersistenceController.shared.container.viewContext
     private var contact: Contact?
     
-    let onSave = PassthroughSubject<Void, Never>()
-    let onCancel = PassthroughSubject<Void, Never>()
     
     func create(name: String, email: String, cep: String, numberOne: String, numberTwo: String) {
         
