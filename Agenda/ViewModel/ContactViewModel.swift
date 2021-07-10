@@ -31,7 +31,7 @@ class ContactViewModel: ObservableObject {
             print("could not save \(error) \(error.userInfo)")
         }
         
-//        return newContact/
+
     }
     
     func delete(contact: Contact) {
@@ -43,18 +43,6 @@ class ContactViewModel: ObservableObject {
         }
     }
     
-    func fetch() -> [Contact] {
-        let fetchRequest = NSFetchRequest<Contact>(entityName: "Contact")
-//        let fetch = Plant.fetchRequest() as NSFetchRequest <Plant>
-        var contacts: [Contact] = []
-
-        do {
-            contacts = try viewContext.fetch(fetchRequest)
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
-        }
-        return contacts
-    }
     
     func update(contact: Contact, name: String, email: String, cep: String, numberOne: String, numberTwo: String ) {
 

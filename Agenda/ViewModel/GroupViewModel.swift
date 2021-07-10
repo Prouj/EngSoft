@@ -61,14 +61,4 @@ class GroupViewModel: ObservableObject {
         }
     }
     
-    func addProductToDelivery(contact: Contact) {
-        let contactInGroup = Group(context: viewContext)
-//        contactInGroup.name = contact.name
-        contact.addToContactToGroup(NSSet(array: [contactInGroup]))
-//        product.addToProductToProductSold(productSold)
-        contacts.append(contact)
-//        deliveryView.productsTableView.reloadData()
-//        totalPrice += Decimal(quantity) * (contact.sellPrice as Decimal? ?? 0)
-//        deliveryView.totalPriceLabel.text = String(describing: "Preço total: \(totalPrice) reais")
-    }
 }
