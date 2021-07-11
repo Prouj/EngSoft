@@ -14,3 +14,7 @@ Lucas Menescal
 
 
 ### 2) Desenvolva as telas do sistema.
+
+#### WireFrame
+<img src="https://github.com/Prouj/EngSoft/blob/86bca42750e7373737556a1c71a306c5c5234174/Respostas/wireframe.png" width="600">     
+
