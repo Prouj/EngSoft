@@ -133,6 +133,8 @@
 
 #### d) Elaborar os diagramas de classe do sistema.
 
+<img src="https://github.com/Prouj/EngSoft/blob/1ce3bed5ba6f89f3804fb1a8baf6638f40dfef67/Respostas/Diagrama%20de%20classe.jpg" width="600"> 
+
 
 #### e) Elaborar os diagramas de estado de um objeto Conta (Account).
 
@@ -141,6 +143,7 @@
 
 #### f) Diagramas de componentes. 
 
+<img src="https://github.com/Prouj/EngSoft/blob/1ce3bed5ba6f89f3804fb1a8baf6638f40dfef67/Respostas/Diagrama%20de%20componentes%20.jpg" width="600"> 
 
 #### g) Elaborar os diagramas de implantação. 
 
@@ -148,4 +151,4 @@
 
 ### 4) e 5) Implementação do projeto de acordo com os requisitos
 
-#### Na implementação desse projeto foi utizada arquitetura MVVM, que é comumente utilizada junto ao framework SwiftUI que foi utilizado para o desenvolvimento das tela do projeto, esse framework, tem algumas vantagens por já ter formas de manter mais facilmente as telas sempre atualizadas de forma automática, utilizando-se m conjunto o padrão ObeservebleObject e os tipos @Biding @State, onde conseguimos fazer com que o sistema se mantenha "observando" mudanças que ocorram no objeto ObesercebleObject. Também foi feita a utilização dos frameworks CoreData que é utilizado para a persistência local dos dados, assim como foi utilizado o iCloud para se fazer o backup dos dados e fazer a sincronização com o Apple iD logado no aparelho. 
+#### Na implementação desse projeto foi utilizada arquitetura MVVM, que é comumente utilizada junto ao framework SwiftUI que foi utilizado para o desenvolvimento das tela do projeto, esse framework tem algumas vantagens por já ter formas de manter mais facilmente as telas sempre atualizadas de forma automática, utilizando-se em conjunto com o padrão ObeservebleObject e os tipos @Biding @State, onde conseguimos fazer com que o sistema se mantenha "observando" mudanças que ocorram no objeto ObesercebleObject. Também foi feita a utilização dos frameworks CoreData que é utilizado para a persistência local dos dados, assim como foi utilizado o iCloud para se fazer o backup dos dados e fazer a sincronização com o Apple iD logado no aparelho. 
